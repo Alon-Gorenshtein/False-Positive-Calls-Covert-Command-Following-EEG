@@ -1,0 +1,169 @@
+{
+ "pipes": {
+  "columbia": {
+   "null": "ncmd_bdsp",
+   "variant": "as_coded:call_paper",
+   "extra_variants": [],
+   "max_overlays": 1,
+   "development": {
+    "k": 33,
+    "n": 481,
+    "rate": 0.06860706860706861
+   },
+   "development_crossfit": {
+    "k": 33,
+    "n": 481,
+    "rate": 0.06860706860706861
+   }
+  },
+  "cornell": {
+   "null": "ncmd_bdsp",
+   "variant": "c3_jackknife_bh_keep40_r4_om2contig",
+   "extra_variants": [],
+   "max_overlays": 1,
+   "development": {
+    "k": 164,
+    "n": 703,
+    "rate": 0.2332859174964438
+   },
+   "development_crossfit": {
+    "k": 164,
+    "n": 703,
+    "rate": 0.2332859174964438
+   }
+  },
+  "dubois": {
+   "null": "ncmd_bdsp",
+   "variant": "c3_b_assessment_blocked_phase1",
+   "extra_variants": [
+    "assessment_blocked_perm"
+   ],
+   "max_overlays": 1,
+   "development": {
+    "k": 157,
+    "n": 707,
+    "rate": 0.22206506364922207
+   },
+   "development_crossfit": {
+    "k": 157,
+    "n": 707,
+    "rate": 0.22206506364922207
+   }
+  },
+  "edlow17": {
+   "null": "ncmd_bdsp",
+   "variant": "permsecond_cvblock_alt",
+   "extra_variants": [],
+   "max_overlays": 1,
+   "development": {
+    "k": 3,
+    "n": 796,
+    "rate": 0.0037688442211055275
+   },
+   "development_crossfit": {
+    "k": 4,
+    "n": 796,
+    "rate": 0.005025125628140704
+   }
+  },
+  "mbmi": {
+   "null": "ncmd_bdsp",
+   "variant": "or17_120_cspfold_mean57",
+   "extra_variants": [],
+   "max_overlays": 1,
+   "development": {
+    "k": 8,
+    "n": 550,
+    "rate": 0.014545454545454545
+   },
+   "development_crossfit": {
+    "k": 8,
+    "n": 550,
+    "rate": 0.014545454545454545
+   }
+  },
+  "gibson16": {
+   "null": "nstim0_bdsp",
+   "variant": "p3b_onepos_fieldtrip2018",
+   "extra_variants": [],
+   "max_overlays": 1,
+   "development": {
+    "k": 25,
+    "n": 683,
+    "rate": 0.036603221083455345
+   },
+   "development_crossfit": {
+    "k": 28,
+    "n": 683,
+    "rate": 0.040995607613469986
+   }
+  },
+  "mbvt": {
+   "null": "nstim0_bdsp",
+   "variant": "vt3_mur20_seg8_median_gt23",
+   "extra_variants": [],
+   "max_overlays": 2,
+   "development": {
+    "k": 117,
+    "n": 850,
+    "rate": 0.1376470588235294
+   },
+   "development_crossfit": {
+    "k": 129,
+    "n": 841,
+    "rate": 0.15338882282996433
+   }
+  }
+ },
+ "not_replicated": {
+  "cruse11": "primary reading needs 2,186 s of clean EEG; replication windows are 1,800 s",
+  "cruse12p": "primary reading needs 1,891 s of clean EEG; replication windows are 1,800 s",
+  "chennu13": "no eligible reading on clinical EEG"
+ },
+ "development_mbvt_two_run": {
+  "k": 206,
+  "n": 841,
+  "rate": 0.24494649227110582
+ },
+ "test": {
+  "confirmatory": {
+   "pipes": [
+    "cornell",
+    "dubois",
+    "mbvt"
+   ],
+   "benchmark": 0.05,
+   "multiplicity": "Holm over 3",
+   "test": "one-sided exact binomial, rate above 5%"
+  },
+  "specificity_controls": {
+   "pipes": [
+    "columbia",
+    "edlow17",
+    "mbmi",
+    "gibson16"
+   ],
+   "bound": 0.1,
+   "multiplicity": "Holm over 4",
+   "test": "one-sided exact binomial, rate below 10%"
+  },
+  "reproduction": "replication rate inside the 95% prediction interval around the development cross-fitted rate (prediction_interval)",
+  "per_patient": {
+   "mbvt": "any positive among the first 2 runs"
+  },
+  "unit": "patient (one window each, first overlay)",
+  "missing": "error, no-fit and no-usable-trial windows leave the denominator"
+ },
+ "draw": {
+  "rule": "126_c2_fresh.py extend: ranks of the pinned fresh-draw listing after the first 400, each patient with its first scanned segment that holds a clean 1,800-s window, at a start drawn uniformly from its eligible starts; touched patients refused",
+  "window_s": 1800,
+  "seed": [
+   20261016,
+   2
+  ],
+  "n_ext": 730,
+  "listing_sha256": "e0baa3f6c4749e18353454d4529332c60fc919875fe2fc0cfcc26dd512e3b39d"
+ },
+ "stated_rule_sha256": "390a675b9cd639dc3224487e123439589e9af8ac08378f4b9ebc1f110e71e6b4",
+ "code_commit": "455701d4b09f11ddc4bf0782209ae7098984d588"
+}

@@ -1,0 +1,39 @@
+{
+  "fixed_amplitude": {
+    "param": "thresh_uv",
+    "value": 10.5,
+    "median_events": 48.5,
+    "target": 50.0
+  },
+  "relative_threshold": {
+    "param": "pct",
+    "value": 95.5,
+    "median_events": 49.5,
+    "target": 50.0
+  },
+  "rms_ferrarelli": {
+    "param": "mult",
+    "value": 2.5,
+    "median_events": 52.0,
+    "target": 50.0
+  },
+  "a7_lacourse": {
+    "param": "scale",
+    "value": 1.0,
+    "median_events": 9.5,
+    "target": 50.0,
+    "note": "NOT rate-matched. Its published correlation criterion of 0.69 binds before the expert rate is reached, and that criterion is a Pearson correlation which must not be rescaled. A7 therefore runs at its published operating point and detects fewer events than the expert; the paper reports that asymmetry rather than tuning it away."
+  },
+  "wavelet": {
+    "param": "mult",
+    "value": 3.125,
+    "median_events": 50.5,
+    "target": 50.0
+  },
+  "sigma_index": {
+    "param": "thresh",
+    "value": 2.3,
+    "median_events": 51.5,
+    "target": 50.0
+  }
+}
