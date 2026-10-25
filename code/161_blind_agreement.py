@@ -1,7 +1,7 @@
 """Fidelity check by an independent implementation: du Bois (Phase I advancement) and the vibrotactile P300 (accuracy
 above 23%) written from the publication texts alone, without access to this study's code (blind_impl/), run on the
 same clinical EEG development windows and the same sham schedules as this study's primary readings. Bars fixed here:
-the blind rate lies inside the range of readings consistent with the publication (eTable 21), and call agreement
+the blind rate lies inside the range of readings consistent with the publication (Table S21), and call agreement
 kappa >= 0.6. Reported whatever they show. The P300 schedule switches the target wrist between instructions, so each
 stimulus is relabeled target ("left"), non-target wrist ("right") or distractor, with target="left"; the blind method
 is not changed. -> output/tables/blind_agreement.json (no identifiers)."""

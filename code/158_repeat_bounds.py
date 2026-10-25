@@ -5,7 +5,7 @@ the stored post-arrest windows are one per patient, so true repeated recordings 
 treated as another patient's first overlay (independent recordings; stored as 'upper_bound'). For Edlow's any-positive
 rule this is an upper bound under non-negative within-patient association of calls. For the Columbia rule it is not:
 its correction depends on the number of recordings, and identical recordings give the 1-recording rate at every k.
-The same-session value at k = 2 is reported in eTable 9B. Monte Carlo over draws of k distinct patients; 95% CI by resampling patients.
+The same-session value at k = 2 is reported in Table S9B. Monte Carlo over draws of k distinct patients; 95% CI by resampling patients.
 Also the calibration of the Edlow permutation P values on command-free first overlays (share below .05 and .5, and a
 Kolmogorov-Smirnov test against uniform). -> output/tables/repeat_bounds.json (no identifiers)."""
 import importlib

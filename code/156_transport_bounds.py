@@ -122,7 +122,7 @@ def decision_summary():
                      "healthy_shuffled_calls": None if hd is None else _cell(hd["control"]),
                      "simulated_detection": None,
                      "note": "simulated detection was measured for size-corrected comparators, not at the published "
-                             "call rule (eTable 14B)"}
+                             "call rule (Table S14B)"}
     return out
 
 
