@@ -768,7 +768,7 @@ def own_sha256():
 
 
 def guard_split(split, spec_path=None):
-    """114's split guard (the check against the private working copy is not applied here)."""
+    """114's split guard (its check of files not distributed with this code is not applied here)."""
     rn.guard_split(split, spec_path)
 
 

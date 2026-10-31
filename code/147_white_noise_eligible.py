@@ -216,7 +216,7 @@ def units(pipes):
 
 
 def guard(motor_sha, erp_sha):
-    """The classification files' sha256 (the frozen-code hash check is not applied in this copy)."""
+    """The classification files' sha256 (the code-hash check is not applied here)."""
     sr.check_classification(sr.FILES, (motor_sha, erp_sha))
 
 

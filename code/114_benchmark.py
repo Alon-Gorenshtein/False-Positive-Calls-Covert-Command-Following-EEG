@@ -164,7 +164,7 @@ NULL_ROW = ("none", 0.0, 0.0)
 
 
 def locked_committed(spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return True
 
 

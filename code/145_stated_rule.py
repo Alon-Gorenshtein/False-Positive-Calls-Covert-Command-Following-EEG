@@ -707,8 +707,7 @@ def _sha256(path):
 
 
 def check_classification(paths, shas, repo=ROOT):
-    """Each file with the given sha256 (the commit-state checks of the private working copy are not applied
-    here)."""
+    """Each file with the given sha256 (the version-control checks are not applied here)."""
     for p, want in zip(paths, shas):
         got = _sha256(p)
         if got != want:

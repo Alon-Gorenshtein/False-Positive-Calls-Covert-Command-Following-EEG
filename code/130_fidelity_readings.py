@@ -165,17 +165,17 @@ def in_dir(path, fn):
 
 
 def locked_hash():
-    """Not available in this copy: the frozen-code hash is checked in the private working copy."""
-    raise RuntimeError("the frozen-code hash is checked in the private working copy only")
+    """Not available here: the code-hash check reads files that are not distributed with this code."""
+    raise RuntimeError("the code-hash check reads files that are not distributed with this code")
 
 
 def pinned(files, spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return True
 
 
 def guard(files, spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return None
 
 

@@ -323,7 +323,7 @@ def own_sha256():
 
 
 def guard_real(spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return None
 
 

@@ -1,4 +1,4 @@
-"""Post-arrest coma arm of the null benchmark (I-CARE), outside the frozen-code hash.
+"""Post-arrest coma arm of the null benchmark (I-CARE).
 Built test-first on synthetic fixtures, a local stub server and the three dev patients (code/test_icare_arm.py).
 
 Data: I-CARE v2.1, the public 607 patients (PhysioNet, open, no login), read by HTTP Range. WFDB format 16 with a
@@ -205,7 +205,7 @@ def own_sha256():
 
 
 def guard_pinned(spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return None
 
 

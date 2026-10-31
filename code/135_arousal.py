@@ -669,7 +669,7 @@ def d3_windows():
 
 
 def guard_pinned(spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return None
 
 

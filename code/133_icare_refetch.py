@@ -1,4 +1,4 @@
-"""Additional fetches for the I-CARE arm, outside the frozen-code hash; built test-first on a stub server
+"""Additional fetches for the I-CARE arm; built test-first on a stub server
 (code/test_icare_refetch.py). Reads no outcome and no covariate: it takes the fixed segment, start and processing of
 each patient from the arm's own per-patient files (122_icare_arm.py, imported, never edited). It runs only after the
 main arm has finished (it would compete for PhysioNet bandwidth); --estimate reads headers and directory listings
@@ -65,7 +65,7 @@ def own_sha256():
 
 
 def guard_pinned(spec_path=None):
-    """Not applied in this copy: the check reads files of the private working copy."""
+    """Not applied here: the check reads files that are not distributed with this code."""
     return None
 
 

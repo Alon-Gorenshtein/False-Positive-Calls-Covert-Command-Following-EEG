@@ -116,7 +116,7 @@ def roots(tmp_path, monkeypatch):
 
 
 def _spec_path(tmp_path, locked):
-    """An empty stand-in for the private notes file the working copy's guard reads (not read in this copy)."""
+    """An empty stand-in for a local file the guard reads (not read here)."""
     p = tmp_path / ("notes_s2.txt" if locked else "notes.txt")
     p.write_text("")
     return str(p)

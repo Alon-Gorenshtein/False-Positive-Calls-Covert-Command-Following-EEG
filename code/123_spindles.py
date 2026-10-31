@@ -193,7 +193,7 @@ def _mg():
 
 def guard_split(split, release=False, spec_path=None):
     """The dev split needs nothing; the analysis split needs the explicit release flag and 114's guard (the
-    check against the private working copy is not applied here)."""
+    check of files not distributed with this code is not applied here)."""
     rn = _rn()
     if split != "analysis":
         rn.guard_split(split, spec_path)

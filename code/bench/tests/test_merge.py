@@ -411,7 +411,7 @@ def test_analysis_merge_refuses_without_the_touched_list(tmp_path, monkeypatch):
 
 
 def _locked(tmp_path):
-    """An empty stand-in for the private notes file the working copy's guard reads (not read in this copy)."""
+    """An empty stand-in for a local file the guard reads (not read here)."""
     p = tmp_path / "notes_s2.txt"
     p.write_text("")
     return str(p)

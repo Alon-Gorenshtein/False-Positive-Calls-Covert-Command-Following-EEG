@@ -47,8 +47,8 @@ def code_hash(files=None):
 
 
 def render():
-    """Not available in this copy: the module-spec table is generated in the working copy only."""
-    raise RuntimeError("the module-spec table is generated in the working copy only")
+    """Not available here: the module-spec table is built from files that are not distributed with this code."""
+    raise RuntimeError("the module-spec table is built from files that are not distributed with this code")
 
 
 if __name__ == "__main__":
