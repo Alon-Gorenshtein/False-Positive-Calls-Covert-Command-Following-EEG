@@ -12,7 +12,7 @@ def test_p300_implied_rate():
 
 def test_every_command_analysis_has_a_reference_rate():
     assert set(nr.NOMINAL) == {"columbia", "cornell", "cruse11", "cruse12p", "edlow17", "mbmi", "dubois", "mbvt",
-                               "gibson16"}
+                               "gibson16", "chennu13", "sokoliuk21"}
     for v in nr.NOMINAL.values():
         assert (v["stated_rate"] or v["implied_rate"]) and v["basis"]
 
@@ -35,3 +35,5 @@ def test_fisher_against_white_noise():
     from scipy.stats import fisher_exact
     assert abs(nr.fisher_vs_white({"k": 117, "n": 850}, {"k": 76, "n": 500})
                - fisher_exact([[117, 733], [76, 424]])[1]) < 1e-12
+
+

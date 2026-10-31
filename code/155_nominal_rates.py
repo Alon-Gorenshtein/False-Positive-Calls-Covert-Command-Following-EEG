@@ -31,7 +31,7 @@ SH = os.path.join(ROOT, "output", "intermediate", "_white500_shards")
 OUT = os.path.join(T, "nominal_rates.json")
 R_NEW = range(2 * 10 ** 6, 2 * 10 ** 6 + 500)
 WHITE_PIPES = ("cornell", "dubois", "mbvt")
-NULL = {"mbvt": "nstim0_bdsp", "gibson16": "nstim0_bdsp"}
+NULL = {"mbvt": "nstim0_bdsp", "gibson16": "nstim0_bdsp", "chennu13": "nstim0_bdsp", "sokoliuk21": "nstim0_bdsp"}
 
 
 MIN_FREE_PCT = 15
@@ -68,7 +68,14 @@ NOMINAL = {
                       "the 10 splits were independent"},
     "gibson16": {"rule": "cluster permutation P < .05 for the target-versus-nontarget P3b", "stated_rate": 0.05,
                  "implied_rate": None, "basis": "stated significance level"},
+    "chennu13": {"rule": "all 3 cluster tests P <= .05 (P3b against baseline, its temporal cluster test, explicit "
+                         "versus implicit P3b)", "stated_rate": 0.05, "implied_rate": None,
+                 "basis": "stated significance level; requiring all 3 tests keeps the rate at or below .05"},
+    "sokoliuk21": {"rule": "surrogate test of phrase and sentence tracking P < .05", "stated_rate": 0.05,
+                   "implied_rate": None,
+                   "basis": "stated significance level of a test of covert processing (not a command-following call)"},
 }
+LONG_DEV = os.path.join(T, "long_schedule_dev.json")
 
 
 def _load(name):
@@ -77,7 +84,10 @@ def _load(name):
 
 
 def primary(pipe):
-    return _load("stated_rule.json")["entries"][f"{NULL.get(pipe, 'ncmd_bdsp')}|{pipe}"]
+    e = _load("stated_rule.json")["entries"][f"{NULL.get(pipe, 'ncmd_bdsp')}|{pipe}"]
+    if e.get("stated_rule") is None and pipe == "chennu13" and os.path.exists(LONG_DEV):
+        return _load("long_schedule_dev.json")["chennu13"]
+    return e
 
 
 def reference_rate(pipe):

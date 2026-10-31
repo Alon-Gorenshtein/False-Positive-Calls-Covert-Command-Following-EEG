@@ -1,0 +1,17 @@
+{
+ "what": "Frozen replication of the Cornell command-level jackknife (171) on windows it was not developed on: the 730",
+ "primary": "command_normal",
+ "secondary": [
+  "command_t",
+  "command_t_dec"
+ ],
+ "check": "sample_normal",
+ "alpha": 0.05,
+ "bar": 0.05,
+ "cohorts": [
+  "rep",
+  "icare"
+ ],
+ "reading": "c3_jackknife_bh_keep40_r4_om2contig",
+ "test": "one-sided exact binomial of the primary count against the bar (H1: below), Holm over cohorts"
+}

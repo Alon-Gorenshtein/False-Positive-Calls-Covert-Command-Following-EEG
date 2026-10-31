@@ -13,6 +13,10 @@ docs/                  stated-rule-motor.json and stated-rule-erp.json: the clas
                        sizes; pdoc-case-map.csv: case, recording and status of the 40 recordings of the open
                        Mendeley prolonged-disorders-of-consciousness release (CC BY 4.0)
 output/tables/replication_frozen.json   the readings fixed before the replication patients were drawn
+output/tables/cornell_command_frozen.json   the command-level Goldfine 2011 test (175_cornell_frozen.py), fixed
+                       before it was run on the replication and post-arrest windows
+provenance.json        for every file here, the sha256 of this copy and of the working-copy file it was made from,
+                       with the working-copy commit; "identical" marks files copied byte for byte
 
 How this copy differs from the working copy the results came from
 - Comments are removed, and some words in names, strings and docstrings are changed, including five script file
@@ -30,5 +34,7 @@ How this copy differs from the working copy the results came from
 
 Data are not included. Supplementary Data S1, Table S1, lists each dataset, its licence and how to obtain it; the clinical
 EEG (Brain Data Science Platform) requires credentialed access. Each script's docstring states what it does. The
-Python packages and the versions used are in requirements.txt. code/bdsp_morgoth.py also needs the Morgoth EEG
+Python packages and the versions used are in requirements.txt (Python 3.9.6) and, for scripts 170 to 181 and
+code/fig_validation.py (genuine-task controls, calibration, longer windows), requirements-py312.txt (Python 3.12.0).
+code/bdsp_morgoth.py also needs the Morgoth EEG
 model's own code and weights, which are not included.
